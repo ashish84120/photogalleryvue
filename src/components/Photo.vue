@@ -1,6 +1,6 @@
 <template>
   <div class="lightbox" @click.self="closeLightbox">
-    <img :src="photoUrl(photo.filename)">
+    <img class="thPhoto" :src="photoUrl(photo.filename)">
     <div class="lightbox-info">
       <div class="lightbox-info-inner">
         <p v-if="photo.title">{{ photo.title }}</p>
@@ -54,6 +54,7 @@ export default {
     margin: auto;
     width: 100%;
     grid-column-start: 2;
+    padding: 2rem;
   }
   .lightbox-info {
     margin: auto 2rem auto 0;
@@ -62,5 +63,12 @@ export default {
     background-color: #FFFFFF;
     display: inline-block;
     padding: 2rem;
+    margin: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .thPhoto {
+    padding: 5rem;
   }
 </style>

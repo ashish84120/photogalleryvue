@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '../views/Home.vue';
 import Photo from '../views/Photo.vue';
+import Upload from '../views/Upload.vue';
+
 Vue.use(Router);
 export default new Router({
   mode: 'history',
@@ -17,5 +19,10 @@ export default new Router({
       name: 'photo',
       component: Photo,
     },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Upload,
+    }
   ],
 });
